@@ -1,0 +1,26 @@
+/* Custom styles to complement Tailwind */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Animation for the download progress bar */
+#progress-bar {
+    transition: width 0.3s ease;
+}
+
+/* Custom styling for format cards */
+[data-format-id]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .flex-col-on-mobile {
+        flex-direction: column;
+    }
+    
+    .w-full-on-mobile {
+        width: 100%;
+    }
+}

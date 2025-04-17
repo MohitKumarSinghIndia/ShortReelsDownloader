@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Options | Video Downloader</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="text-center mb-8">
+            <div class="flex justify-center mb-4">
+                <img src="assets/logo.png" alt="Video Downloader Logo" class="h-12">
+            </div>
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">Download Options</h1>
+            <a href="/" class="text-blue-800 hover:underline">← Back to downloader</a>
+        </header>
+
+        <!-- Video Info Section -->
+        <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden mb-8">
+            <div class="md:flex">
+                <div class="md:w-1/3 p-4">
+                    <img id="video-thumbnail" src="" alt="Video thumbnail" class="w-full h-auto rounded-lg">
+                </div>
+                <div class="md:w-2/3 p-6">
+                    <h2 id="video-title" class="text-2xl font-bold text-gray-800 mb-2"></h2>
+                    <div class="flex items-center text-gray-600 mb-4">
+                        <i class="fas fa-clock mr-2"></i>
+                        <span id="video-duration"></span>
+                    </div>
+                    <p id="video-description" class="text-gray-700 mb-4"></p>
+                    <div class="flex flex-wrap gap-2">
+                        <a id="original-url" href="#" target="_blank" class="inline-flex items-center px-3 py-1 bg-gray-200 text-gray-800 rounded-full text-sm">
+                            <i class="fas fa-external-link-alt mr-1"></i> View Original
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Download Options -->
+        <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden p-6 mb-8">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Available Download Options</h2>
+            
+            <div class="mb-6">
+                <label for="format-select" class="block text-sm font-medium text-gray-700 mb-2">Select Format:</label>
+                <select id="format-select" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <option value="">-- Select a format --</option>
+                </select>
+            </div>
+
+            <div id="formats-container" class="space-y-4">
+                <!-- Formats will be populated here by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Download Progress -->
+        <div id="download-progress" class="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden p-6 hidden">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Downloading...</h2>
+            <div class="w-full bg-gray-200 rounded-full h-4 mb-4">
+                <div id="progress-bar" class="bg-blue-600 h-4 rounded-full" style="width: 0%"></div>
+            </div>
+            <p id="progress-text" class="text-center text-gray-600">Preparing download...</p>
+            <div id="download-complete" class="hidden text-center mt-4">
+                <div class="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-lg mb-4">
+                    <i class="fas fa-check-circle mr-2"></i> Download complete!
+                </div>
+                <div>
+                    <a id="download-link" href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition duration-200">
+                        <i class="fas fa-download mr-2"></i> Save Video
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="container mx-auto px-4 text-center">
+        <p>&copy; 2025 Video Downloader. All rights reserved.</p>
+        <p class="mt-2 text-gray-400 text-sm">This service is for personal use only. Please respect copyright laws.</p>
+        <p class="mt-2 text-gray-500 text-sm">
+            Made with 
+            <i class="fas fa-heart text-red-500 mx-1"></i> by 
+            <a href="https://github.com/MohitKumarSingh-01" target="_blank" class="text-red-500 font-semibold hover:underline">
+                Mohit Thakur
+            </a>
+        </p>
+    </div>
+</footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
